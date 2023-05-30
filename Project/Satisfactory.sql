@@ -139,9 +139,83 @@ go
 --    end
 --end
 
---EXEC sp_edit_item_in_Stotage
+--exec sp_edit_item_in_Stotage
 --    @ItemId = 1, 
---    @NewItemName = N'Updated Item',
+--    @NewItemName = N'Updated I',
 --    @NewDescription = N'....',
 --    @NewQuantityOfGoods = 150,
 --    @NewPrice = 15.00;
+
+--create proc sp_delete_item_in_storage 
+--    @ItemId int
+--as
+--begin
+--    -- Check if the current user has root rights
+--    if (select [isRoot] from Users where [Login] = current_user and [isRoot] = 1) = 1
+--    begin
+--        -- Check if the item exists in the storage
+--        if exists (select 1 from Item where Id = @ItemId)
+--        begin
+--            -- Remove the item from the storage
+--            delete from Item where Id = @ItemId
+
+--            print ('Item removed from the storage successfully.')
+--        end
+--        else
+--        begin
+--            print ('Item does not exist in the storage.')
+--        end
+--    end
+--    else
+--    begin
+--        print ('You do not have the required permissions to perform this action.')
+--    end
+--end
+--exec sp_delete_item_in_storage
+--    @ItemId = 1; -- Provide the ID of the item to be removed
+
+--create proc srp_search_item_in_storage 
+--    @SearchKeyword nvarchar(100)
+--as
+--begin
+--    -- Perform the search query
+--    select Id, [Name], [Description], QuantityOfGoods, Price
+--    from Item
+--    where [Name] like '%' + @SearchKeyword + '%' or [Description] like '%' + @SearchKeyword + '%';
+--end
+--exec srp_search_item_in_storage
+--    @SearchKeyword = N'Pills';
+
+--create proc sp_user_authentication
+--    @Login nvarchar(100),
+--    @Password nvarchar(100),
+--    @IsAuthorized bit output
+--as
+--begin
+--    set @IsAuthorized = 0; -- Initialize the authorization flag to 0 (not authorized)
+
+--    -- Check if the user exists and the provided credentials are correct
+--    if exists (select 1 from Users where [Login] = @Login and [Password] = @Password)
+--    begin
+--        -- Check if the user is authorized (has root rights)
+--        if exists (select 1 from Users where [Login] = @Login and [isRoot] = 1)
+--        begin
+--            set @IsAuthorized = 1; -- Set the authorization flag to 1 (authorized)
+--        end
+--    end
+--end
+declare @IsAuthorized bit;
+
+exec sp_user_authentication
+    @Login = N'User1',
+    @Password = N'password1',
+    @IsAuthorized = @IsAuthorized output;
+
+if @IsAuthorized = 1
+begin
+    print 'User is authenticated and authorized.'
+end
+else
+begin
+    print 'The user does not have root rights'
+end
