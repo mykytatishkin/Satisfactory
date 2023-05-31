@@ -4,3 +4,9 @@ D:\VisualStudioC#_Save\Client_System\obj\Debug\Client_System.csproj.AssemblyRefe
 D:\VisualStudioC#_Save\Client_System\obj\Debug\Client_System.csproj.CoreCompileInputs.cache
 D:\VisualStudioC#_Save\Client_System\obj\Debug\Client_System.dll
 D:\VisualStudioC#_Save\Client_System\obj\Debug\Client_System.pdb
+C:\Users\ARTEM\Documents\GitHub\Satisfactory\Client_System\bin\Debug\Client_System.dll
+C:\Users\ARTEM\Documents\GitHub\Satisfactory\Client_System\bin\Debug\Client_System.pdb
+C:\Users\ARTEM\Documents\GitHub\Satisfactory\Client_System\obj\Debug\Client_System.csproj.AssemblyReference.cache
+C:\Users\ARTEM\Documents\GitHub\Satisfactory\Client_System\obj\Debug\Client_System.csproj.CoreCompileInputs.cache
+C:\Users\ARTEM\Documents\GitHub\Satisfactory\Client_System\obj\Debug\Client_System.dll
+C:\Users\ARTEM\Documents\GitHub\Satisfactory\Client_System\obj\Debug\Client_System.pdb

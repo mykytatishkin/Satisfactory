@@ -4,6 +4,21 @@
     "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Project\\Project_Stock.csproj": {}
   },
   "projects": {
+    "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Client_System\\Client_System.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Client_System\\Client_System.csproj",
+        "projectName": "Client_System",
+        "projectPath": "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Client_System\\Client_System.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
     "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Project\\Project_Stock.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -50,6 +65,28 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -71,6 +108,21 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Server_System\\Server_System.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Server_System\\Server_System.csproj",
+        "projectName": "Server_System",
+        "projectPath": "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Server_System\\Server_System.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
       }
     }
   }
