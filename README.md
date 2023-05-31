@@ -5,9 +5,9 @@
 Проєкт був створен для зручного користування складом, підійде усім хто має свій склад та тому подібне де дуже багато різних речей.
 
 ## Project Team
-[Микита Тішкін - Back-End, Lead](https://github.com/mykytatishkin)
-[Артем Шараєвській - Front-End](https://github.com/artemm228)
-[Артем Чорненко - Database](https://github.com/artemka0808)
+- [Микита Тішкін - Back-End, Lead](https://github.com/mykytatishkin)
+- [Артем Шараєвській - Front-End](https://github.com/artemm228)
+- [Артем Чорненко - Database](https://github.com/artemka0808)
 
 ## Fast Links
 - [Trello](https://trello.com/invite/b/pQ5n5Fd1/ATTIb62841ac86c740cb2d26d7cd9d8d71feE24876F7/satisfactory)
