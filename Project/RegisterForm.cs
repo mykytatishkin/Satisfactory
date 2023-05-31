@@ -115,7 +115,7 @@ namespace Project_Stock
                 MessageBox.Show("Error. Enter password");
             else
             {
-                this.Hide();
+                this.Close();
                 LoginForm loginForm = new LoginForm();
                 loginForm.Show();
             }
@@ -123,7 +123,7 @@ namespace Project_Stock
 
         private void lbRegister_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
         }

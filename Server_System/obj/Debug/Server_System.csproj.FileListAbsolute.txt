@@ -1,0 +1,8 @@
+D:\VisualStudioC#_Save\Server_System\bin\Debug\Server_System.exe.config
+D:\VisualStudioC#_Save\Server_System\bin\Debug\Server_System.exe
+D:\VisualStudioC#_Save\Server_System\bin\Debug\Server_System.pdb
+D:\VisualStudioC#_Save\Server_System\obj\Debug\Server_System.csproj.AssemblyReference.cache
+D:\VisualStudioC#_Save\Server_System\obj\Debug\Server_System.csproj.SuggestedBindingRedirects.cache
+D:\VisualStudioC#_Save\Server_System\obj\Debug\Server_System.csproj.CoreCompileInputs.cache
+D:\VisualStudioC#_Save\Server_System\obj\Debug\Server_System.exe
+D:\VisualStudioC#_Save\Server_System\obj\Debug\Server_System.pdb

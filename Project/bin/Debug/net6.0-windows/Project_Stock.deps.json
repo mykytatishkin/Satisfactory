@@ -7,14 +7,38 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "Project_Stock/1.0.0": {
+        "dependencies": {
+          "Client_System": "1.0.0",
+          "Server_System": "1.0.0"
+        },
         "runtime": {
           "Project_Stock.dll": {}
+        }
+      },
+      "Client_System/1.0.0": {
+        "runtime": {
+          "Client_System.dll": {}
+        }
+      },
+      "Server_System/1.0.0": {
+        "runtime": {
+          "Server_System.exe": {}
         }
       }
     }
   },
   "libraries": {
     "Project_Stock/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Client_System/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Server_System/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

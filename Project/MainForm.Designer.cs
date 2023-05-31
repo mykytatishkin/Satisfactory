@@ -32,6 +32,7 @@ namespace Project_Stock
             panel1 = new System.Windows.Forms.Panel();
             lbSearch = new System.Windows.Forms.Label();
             panelSearch = new System.Windows.Forms.Panel();
+            btnSearch = new System.Windows.Forms.Button();
             tbSearch = new System.Windows.Forms.TextBox();
             lbNameSearch = new System.Windows.Forms.Label();
             lbProduct = new System.Windows.Forms.Label();
@@ -39,8 +40,8 @@ namespace Project_Stock
             panel2 = new System.Windows.Forms.Panel();
             dgv = new System.Windows.Forms.DataGridView();
             panel3 = new System.Windows.Forms.Panel();
-            button2 = new System.Windows.Forms.Button();
-            button1 = new System.Windows.Forms.Button();
+            btnEdit = new System.Windows.Forms.Button();
+            btnDelete = new System.Windows.Forms.Button();
             btnAdd = new System.Windows.Forms.Button();
             lbUAH = new System.Windows.Forms.Label();
             tbPrice = new System.Windows.Forms.TextBox();
@@ -87,6 +88,7 @@ namespace Project_Stock
             // panelSearch
             // 
             panelSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panelSearch.Controls.Add(btnSearch);
             panelSearch.Controls.Add(tbSearch);
             panelSearch.Controls.Add(lbNameSearch);
             panelSearch.Location = new System.Drawing.Point(497, 268);
@@ -94,9 +96,24 @@ namespace Project_Stock
             panelSearch.Size = new System.Drawing.Size(346, 91);
             panelSearch.TabIndex = 3;
             // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = System.Drawing.Color.Silver;
+            btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnSearch.Location = new System.Drawing.Point(112, 58);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new System.Drawing.Size(128, 22);
+            btnSearch.TabIndex = 14;
+            btnSearch.Text = "Найти";
+            btnSearch.UseVisualStyleBackColor = false;
+            // 
             // tbSearch
             // 
-            tbSearch.Location = new System.Drawing.Point(173, 34);
+            tbSearch.Location = new System.Drawing.Point(173, 23);
             tbSearch.MaximumSize = new System.Drawing.Size(125, 21);
             tbSearch.MinimumSize = new System.Drawing.Size(125, 21);
             tbSearch.Name = "tbSearch";
@@ -106,7 +123,7 @@ namespace Project_Stock
             // lbNameSearch
             // 
             lbNameSearch.AutoSize = true;
-            lbNameSearch.Location = new System.Drawing.Point(11, 37);
+            lbNameSearch.Location = new System.Drawing.Point(11, 26);
             lbNameSearch.Name = "lbNameSearch";
             lbNameSearch.Size = new System.Drawing.Size(156, 15);
             lbNameSearch.TabIndex = 11;
@@ -155,8 +172,8 @@ namespace Project_Stock
             // panel3
             // 
             panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel3.Controls.Add(button2);
-            panel3.Controls.Add(button1);
+            panel3.Controls.Add(btnEdit);
+            panel3.Controls.Add(btnDelete);
             panel3.Controls.Add(btnAdd);
             panel3.Controls.Add(lbUAH);
             panel3.Controls.Add(tbPrice);
@@ -172,35 +189,37 @@ namespace Project_Stock
             panel3.Size = new System.Drawing.Size(346, 233);
             panel3.TabIndex = 2;
             // 
-            // button2
+            // btnEdit
             // 
-            button2.BackColor = System.Drawing.Color.Silver;
-            button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button2.Location = new System.Drawing.Point(239, 193);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(98, 24);
-            button2.TabIndex = 13;
-            button2.Text = "Редактировать";
-            button2.UseVisualStyleBackColor = false;
+            btnEdit.BackColor = System.Drawing.Color.Silver;
+            btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnEdit.Location = new System.Drawing.Point(239, 193);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new System.Drawing.Size(98, 24);
+            btnEdit.TabIndex = 13;
+            btnEdit.Text = "Редактировать";
+            btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
             // 
-            // button1
+            // btnDelete
             // 
-            button1.BackColor = System.Drawing.Color.Silver;
-            button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button1.Location = new System.Drawing.Point(11, 194);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(98, 24);
-            button1.TabIndex = 12;
-            button1.Text = "Удалить";
-            button1.UseVisualStyleBackColor = false;
+            btnDelete.BackColor = System.Drawing.Color.Silver;
+            btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnDelete.Location = new System.Drawing.Point(11, 194);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new System.Drawing.Size(98, 24);
+            btnDelete.TabIndex = 12;
+            btnDelete.Text = "Удалить";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnAdd
             // 
@@ -216,6 +235,7 @@ namespace Project_Stock
             btnAdd.TabIndex = 11;
             btnAdd.Text = "Добавить";
             btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // lbUAH
             // 
@@ -311,6 +331,7 @@ namespace Project_Stock
             Name = "MainForm";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Главная форма";
+            FormClosed += MainForm_FormClosed;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panelSearch.ResumeLayout(false);
@@ -345,8 +366,9 @@ namespace Project_Stock
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Label lbNameSearch;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
 

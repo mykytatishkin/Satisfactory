@@ -1,23 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Project\\Project_Stock.csproj": {}
+    "D:\\VisualStudioC#_Save\\Project_Stock\\Project_Stock.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Project\\Project_Stock.csproj": {
+    "D:\\VisualStudioC#_Save\\Client_System\\Client_System.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\VisualStudioC#_Save\\Client_System\\Client_System.csproj",
+        "projectName": "Client_System",
+        "projectPath": "D:\\VisualStudioC#_Save\\Client_System\\Client_System.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "D:\\VisualStudioC#_Save\\Project_Stock\\Project_Stock.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Project\\Project_Stock.csproj",
+        "projectUniqueName": "D:\\VisualStudioC#_Save\\Project_Stock\\Project_Stock.csproj",
         "projectName": "Project_Stock",
-        "projectPath": "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Project\\Project_Stock.csproj",
-        "packagesPath": "C:\\Users\\ARTEM\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Project\\obj\\",
+        "projectPath": "D:\\VisualStudioC#_Save\\Project_Stock\\Project_Stock.csproj",
+        "packagesPath": "C:\\Users\\rename\\.nuget\\packages\\",
+        "outputPath": "D:\\VisualStudioC#_Save\\Project_Stock\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ARTEM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rename\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -25,13 +40,20 @@
           "net6.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Microsoft SDKs\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\VisualStudioC#_Save\\Client_System\\Client_System.csproj": {
+                "projectPath": "D:\\VisualStudioC#_Save\\Client_System\\Client_System.csproj"
+              },
+              "D:\\VisualStudioC#_Save\\Server_System\\Server_System.csproj": {
+                "projectPath": "D:\\VisualStudioC#_Save\\Server_System\\Server_System.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -43,24 +65,6 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
-          "dependencies": {
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[5.1.1, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.5, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -80,8 +84,23 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "D:\\VisualStudioC#_Save\\Server_System\\Server_System.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\VisualStudioC#_Save\\Server_System\\Server_System.csproj",
+        "projectName": "Server_System",
+        "projectPath": "D:\\VisualStudioC#_Save\\Server_System\\Server_System.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
       }
     }
   }
