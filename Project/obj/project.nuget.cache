@@ -1,8 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "VOY+68boVxEzUyD8OcDJcfT5VYmBuMg167WkwqLF8f4qKJJ6A/HgRTgzc/+AEOZBJrmKi+Kcp2cZB7FdV9Qn9A==",
-  "success": true,
-  "projectFilePath": "D:\\VisualStudioC#_Save\\Project_Stock\\Project_Stock.csproj",
+  "dgSpecHash": "Wqbef64MfGu2y1F9H+Stg2uiNCXW9fMbxmvm7498/pE07WXmlxo5dKGNUx5mbUEUGspjpeJyd4rYWfXg/FOW7w==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Project\\Project_Stock.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Client_System\\Client_System.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Client_System\\Client_System.csproj",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Server_System\\Server_System.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\Users\\ARTEM\\Documents\\GitHub\\Satisfactory\\Server_System\\Server_System.csproj",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

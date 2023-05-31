@@ -204,18 +204,69 @@ go
 --        end
 --    end
 --end
-declare @IsAuthorized bit;
+--declare @IsAuthorized bit;
 
-exec sp_user_authentication
+--exec sp_user_authentication
+--    @Login = N'User1',
+--    @Password = N'password1',
+--    @IsAuthorized = @IsAuthorized output;
+
+--if @IsAuthorized = 1
+--begin
+--    print 'User is authenticated and authorized.'
+--end
+--else
+--begin
+--    print 'The user does not have root rights'
+--end
+
+--create proc sp_view_item_in_storage 
+--as
+--begin
+--    -- Retrieve the items in the storage
+--    select Id, [Name], [Description], QuantityOfGoods, Price
+--    from Item;
+--end
+--exec sp_view_item_in_storage
+
+
+--create proc sp_user_login_without_root
+--    @Login nvarchar(100),
+--    @Password nvarchar(100),
+--    @IsAuthorizedNoRoot bit output
+--as
+--begin
+--    -- Check if the user exists and the password matches
+--    if exists (select 1 from Users where [Login] = @Login and [Password] = @Password)
+--    begin
+--        -- User authentication successful
+--        set @IsAuthorizedNoRoot = 1;
+--        print 'User authenticated successfully.'
+--    end
+--    else
+--    begin
+--        -- User authentication failed
+--        set @IsAuthorizedNoRoot = 0;
+--        print 'Authentication failed. Invalid username or password.';
+--    end
+--end
+
+declare @IsAuthorizedNoRoot bit;
+
+exec sp_user_login_without_root
     @Login = N'User1',
     @Password = N'password1',
-    @IsAuthorized = @IsAuthorized output;
+    @IsAuthorizedNoRoot = @IsAuthorizedNoRoot OUTPUT;
 
-if @IsAuthorized = 1
+if @IsAuthorizedNoRoot = 1
 begin
-    print 'User is authenticated and authorized.'
+    -- User is authorized, perform further actions
+    print 'User is authorized. Proceed with non-root operations.';
+    -- Perform additional actions or call other procedures as needed
 end
 else
 begin
-    print 'The user does not have root rights'
+    -- User is not authorized, handle accordingly
+    print 'User is not authorized. Access denied.';
+    -- Handle unauthorized access
 end
